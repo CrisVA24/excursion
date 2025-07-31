@@ -1,0 +1,174 @@
+:root {
+  --main-bg: #000;
+  --heading-color: #fff;
+  --subtitle-color: #a0a0a0;
+  --link-color: #7fffd4; /* Aquamarine */
+  --footer-color: #a0a0a0;
+  --font-main: 'Montserrat', Verdana, Geneva, sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--main-bg);
+  color: var(--heading-color);
+  font-family: var(--font-main);
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  text-align: center;
+  margin-top: 32px;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive between 40px-56px */
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.download-link {
+  display: inline-block;
+  margin: 0 0 32px 0;
+  color: var(--link-color);
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.download-link:hover {
+  color: #19c8ad;
+  text-decoration: underline;
+}
+
+/* PHONE MOCKUP VIDEO */
+.phone-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.phone-mockup {
+  width: 300px;
+  max-width: 90vw;
+  aspect-ratio: 9/19; /* Approximates iPhone ratio */
+  background: #232323;
+  border-radius: 32px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.3);
+  overflow: hidden;
+  border: 3px solid #444;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.phone-mockup video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* INFO SECTION */
+.info-section {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.info-section h2 {
+  font-size: clamp(2rem, 4vw, 2.6rem); /* ~42px max */
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--subtitle-color);
+  font-size: 1.15rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.camp-img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 0 auto;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.23);
+}
+
+/* COMING SOON */
+.coming-soon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0 32px 0;
+}
+
+.icon-phone {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+}
+
+.coming-soon h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem); /* ~38px max */
+  font-weight: 400;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.coming-soon .download-link {
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  text-align: right;
+  color: var(--footer-color);
+  font-size: 1rem;
+  position: relative;
+  padding: 16px 32px 16px 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .camp-img {
+    max-width: 98vw;
+  }
+  .phone-mockup {
+    width: 90vw;
+  }
+  .info-section,
+  .coming-soon {
+    padding: 0 8px;
+  }
+  header {
+    padding: 0 8px;
+  }
+  footer {
+    padding-right: 8px;
+    font-size: 0.95rem;
+  }
+}
